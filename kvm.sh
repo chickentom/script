@@ -1,14 +1,16 @@
 #!/bin/bash
 temp=$(LC_ALL=C lscpu |grep Virtualization)
+OS=$(lsb_release -a)
 echo $temp
-
+echo $OS
 if [[ $temp == *VT-x* || $temp == *AMD* ]];
 then 
-    echo "Your PC is not compatable or you haven't enabled Virtualization Support"
+    echo "Your PC is compatable"
+    if [$OS == *"lsb_release -a"*] then
+    echo "and your are runnin Ubuntu"
+    fi
     exit
+else
+    echo "Your Pc is not compatable"
 fi
-OS=$(lsb_release -a)
-if [$OS == *"lsb_release -a"*]
-then
-    echo "Ubuntu"
 exit
