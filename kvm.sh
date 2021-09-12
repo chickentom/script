@@ -13,11 +13,11 @@ then
     if [[ $OS == *Manjaro* ]];
     then
     echo "You're runnin Manjaro"
-    sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
-    sudo pacman -S ebtables iptables
+    sudo pacman --noconfirm -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
+    sudo pacman --noconfirm -S ebtables iptables
     echo -e "[archlinuxfr]\nSigLevel = Never\nServer = http://repo.archlinux.fr/$arch" >> /etc/pacman.conf
-    sudo pacman -Syy
-    sudo pacman -S yaourt
+    sudo pacman --noconfirm -Syy
+    sudo pacman --noconfirm -S yaourt
     yaourt -S --noconfirm --needed libguestfs
     sudo systemctl enable libvirtd.service
     sudo systemctl start libvirtd.service
