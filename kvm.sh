@@ -8,7 +8,7 @@ then
     echo "Your PC is compatable"
     if [$OS == *"lsb_release -a"*] then
     echo "and your are runnin Ubuntu"
-        exit
+    exit
     fi
 else
     echo "Your Pc is not compatable"
