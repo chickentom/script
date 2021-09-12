@@ -15,7 +15,7 @@ then
     echo "You're runnin Manjaro"
     sudo pacman --noconfirm -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
     sudo pacman --noconfirm -S ebtables iptables
-    echo -e "[archlinuxfr]\nSigLevel = Never\nServer = http://repo.archlinux.fr/$(arch)" >> /etc/pacman.conf
+    echo -e "[archlinuxfr]\nSigLevel = Never\nServer = http://repo.archlinux.fr/$(uname -m)" >> /etc/pacman.conf
     sudo pacman --noconfirm -Syy
     sudo pacman --noconfirm -S yaourt
     yaourt -S --noconfirm --needed libguestfs
