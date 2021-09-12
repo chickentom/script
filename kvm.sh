@@ -21,6 +21,8 @@ then
     yaourt -S --noconfirm --needed libguestfs
     sudo systemctl enable libvirtd.service
     sudo systemctl start libvirtd.service
+    sudo systemctl status libvirtd.service
+    echo "DONE!!!!"
     echo "---------------------------------------------"
     
     exit
