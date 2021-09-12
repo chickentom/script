@@ -6,7 +6,7 @@ echo $OS
 if [[ $temp == *VT-x* || $temp == *AMD* ]];
 then 
     echo "Your PC is compatable"
-    if [ $OS == *Ubuntu* ];
+    if [[ $OS == *Ubuntu* ]];
     then
     echo "and your are runnin Ubuntu"
     exit
