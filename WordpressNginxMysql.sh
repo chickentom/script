@@ -1,6 +1,3 @@
-#/bin/sh
-# Thanks to Heyan Maurya on https://www.how2shout.com/linux/script-to-install-lamp-wordpress-on-ubuntu-20-04-lts-server-quickly-with-one-command/ for providing most of that scipt
-
 #/bin/bash
 # Thanks to Heyan Maurya on https://www.how2shout.com/linux/script-to-install-lamp-wordpress-on-ubuntu-20-04-lts-server-quickly-with-one-command/ for providing most of that scipt
 clear
