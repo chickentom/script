@@ -21,7 +21,7 @@ while ! $useraccept; do
     echo "Database Password: $db_password"
     echo "MySQL Root Password: $mysqlrootpass"
     echo "--------------------------------------"
-    echo "Do you want to change these values? (Y|Yes|y|yes) for yes or sth else for no (Default NO)"<
+    echo "Do you want to change these values? (Y|Yes|y|yes) for yes or sth else for no (Default NO)"
     read useraccvalues
 
     if  [[ $useraccvalues == "" ]]; then 
