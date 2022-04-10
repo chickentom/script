@@ -15,7 +15,7 @@ while ! $useraccept; do
     sleep 1
 
     echo "--------------------------------------"
-    echo "Installation Directory: $mysqlrootpass"
+    echo "Installation Directory: $install_dir"
     echo "Database Name: $db_name"
     echo "Database User: $db_user"
     echo "Database Password: $db_password"
