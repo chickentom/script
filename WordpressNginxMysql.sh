@@ -27,13 +27,10 @@ while ! $useraccept; do
     echo "Do you want to change these values? (Y|Yes|y|yes) for yes or sth else for no (Default NO)"<
     read useraccvalues
 
-
     if  [[ $useraccvalues == "" ]]; then 
         useraccept=true
         break
     fi
-
-
 
     if [ $useraccvalues == "Y" ] || [  $useraccvalues == "Yes" ] ||  [ $useraccvalues == "y" ]  || [ $useraccvalues == "yes" ] 
     then 
@@ -76,14 +73,11 @@ while ! $useraccept; do
 done
 echo "Finish"
 
-
-
 #### Install Packages for https and mysql
 apt -y update 
 apt -y upgrade
 apt -y install nginx
 apt -y install mysql-server
-
 
 #### Start http
 rm /var/www/html/index.html
