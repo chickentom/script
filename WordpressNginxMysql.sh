@@ -5,7 +5,7 @@ echo "Welcome to the installation Script of Wordpress, Nginx and Mysql"
 useraccept=false
 
 while ! $useraccept; do 
-    mysqlrootpass="/var/www/html"
+    install_dir="/var/www/html"
     #Creating Random WP Database Credenitals
     db_name="wp`date +%s`"
     db_user=$db_name
@@ -32,9 +32,9 @@ while ! $useraccept; do
     if [ $useraccvalues == "Y" ] || [  $useraccvalues == "Yes" ] ||  [ $useraccvalues == "y" ]  || [ $useraccvalues == "yes" ] 
     then 
         echo "Installation Directory: (Enter for Empty)"
-        read Umysqlrootpass
-        if [[ $Umysqlrootpass != "" ]]; then
-            mysqlrootpass=$Umysqlrootpass
+        read Uinstall_dir
+        if [[ $Uinstall_dir != "" ]]; then
+            install_dir=$Uinstall_dir
             #echo $mysqlrootpass
         fi
         echo "Database Name: (Enter for Empty)"
